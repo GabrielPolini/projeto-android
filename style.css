@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+/* Define uma fonte personalizada chamada 'Android' */
+@font-face{
+    font-family: 'Android';
+    src: url('/idroid.otf');
+}
+
+/* Define variáveis para cores e fontes */
+:root{
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-android: 'Android', cursive;
+}
+
+/* Configurações gerais para resetar margens e preenchimentos padrão em todos os elementos */
+*{
+    margin: 0px;
+    padding: 0px; 
+}
+
+/* Estilos para o corpo da página */
+body {
+    background-color: var(--cor0);           /* Define a cor de fundo para todo o corpo da página usando a variável cor0. */
+    font-family: var(--fonte-padrao);        /* Define a família de fontes padrão para o texto na página usando a variável fonte-padrao. */
+
+/* Estilos para o conteúdo principal (main) */
+main p {
+    margin: 15px 0px;       /* Define margens superior e inferior de 15 pixels e margem lateral zero. */
+    text-align: justify;    /* Justifica o texto dentro dos parágrafos. */
+    text-indent: 30px;      /* Adiciona um recuo de 30 pixels à primeira linha do parágrafo. */
+    line-height: 2em;       /* Define a altura da linha como o dobro do tamanho da fonte. */
+    font-size: 1.1em;       /* Define o tamanho da fonte como 1.1 vezes o tamanho padrão. */
+}
+
+main strong {
+    color: var(--cor4);     /* Define a cor do texto forte como a cor especificada pela variável cor4. */
+    font-weight: bold;       /* Torna o texto forte em negrito. */
+    padding: 2px 6px;        /* Adiciona preenchimento de 2 pixels acima e abaixo e 6 pixels à esquerda e à direita. */
+}
+
+main a {
+    text-decoration: none;                 /* Remove a decoração de sublinhado padrão dos links. */
+    font-weight: bold;                      /* Torna o texto dos links em negrito. */
+    color: var(--cor5);                     /* Define a cor do texto dos links usando a variável cor5. */
+    background-color: var(--cor1);          /* Define a cor de fundo dos links usando a variável cor1. */
+    padding: 2px 6px;                       /* Adiciona preenchimento de 2 pixels acima e abaixo e 6 pixels à esquerda e à direita. */
+}
+
+/* Estilos para links dentro do elemento main quando estão em estado de "hover" (sobreposto pelo cursor) */
+
+main a:hover {
+    text-decoration: underline;    /* Adiciona um sublinhado ao texto do link quando o mouse está sobre ele. */
+    color: var(--cor4);             /* Muda a cor do texto do link para a cor especificada pela variável cor4 quando o mouse está sobre ele. */
+}
+
+
+/* Estilos para o cabeçalho (header) */
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4));
+    /* Cria um plano de fundo gradiente vertical do cor3 para o cor4 no cabeçalho. */
+
+    min-height: 150px;  /* Define a altura mínima do cabeçalho como 150 pixels. */
+    text-align: center; /* Centraliza o conteúdo do cabeçalho horizontalmente. */
+    padding-top: 40px;  /* Adiciona um preenchimento superior de 40 pixels ao cabeçalho. */
+}
+
+/* Estilos para o título h1 dentro do cabeçalho */
+
+header > h1 {
+    color: white;   /* Define a cor do texto do título h1 como branco. */
+    font-size: 3em; /* Define o tamanho da fonte do título h1 como 3 vezes o tamanho padrão. */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels ao título h1. */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.486);
+    /* Adiciona uma sombra de texto com deslocamento horizontal de 2 pixels, deslocamento vertical de 2 pixels,
+       sem desfoque e cor rgba(0, 0, 0, 0.486) (preto com transparência). */
+}
+
+
+/* Estilos para parágrafos dentro do cabeçalho */
+
+header > p {
+    font-family: var(--fonte-padrao);   /* Define a família de fontes para o texto do parágrafo usando a variável fonte-padrao. */
+    font-size: 1.2em;                   /* Define o tamanho da fonte do parágrafo como 1.2 vezes o tamanho padrão. */
+    color: white;                       /* Define a cor do texto do parágrafo como branco. */
+    max-width: 500px;                   /* Limita a largura máxima do parágrafo a 500 pixels. */
+    padding-right: 10px;                /* Adiciona um preenchimento de 10 pixels à direita do parágrafo. */
+    padding-left: 10px;                 /* Adiciona um preenchimento de 10 pixels à esquerda do parágrafo. */
+    margin: auto;                       /* Centraliza o parágrafo horizontalmente usando margens automáticas. */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.486);
+    /* Adiciona uma sombra de texto com deslocamento horizontal de 2 pixels, deslocamento vertical de 2 pixels,
+       sem desfoque e cor rgba(0, 0, 0, 0.486) (preto com transparência). */
+}
+
+
+/* Estilos para a barra de navegação (nav) */
+nav {
+    background-color: var(--cor5);         /* Define a cor de fundo da barra de navegação usando a variável cor5. */
+    padding: 10px;                          /* Adiciona um preenchimento de 10 pixels ao redor do conteúdo da barra de navegação. */
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.363);
+    /* Adiciona uma sombra à barra de navegação com deslocamento vertical de 7 pixels,
+       sem deslocamento horizontal, desfoque de 9 pixels e cor rgba(0, 0, 0, 0.363) (preto com transparência). */
+}
+
+/* Estilos para links dentro da barra de navegação */
+
+nav > a {
+    color: var(--cor1);             /* Define a cor do texto dos links usando a variável cor1. */
+    padding: 10px;                   /* Adiciona um preenchimento de 10 pixels ao redor do conteúdo dos links. */
+    border-radius: 5px;              /* Adiciona um raio de borda de 5 pixels, arredondando as bordas dos links. */
+    text-decoration: none;           /* Remove a decoração de sublinhado padrão dos links. */
+    font-weight: bold;               /* Torna o texto dos links em negrito. */
+    transition-duration: 0.5s;       /* Define a duração da transição ao alterar propriedades dos links para 0.5 segundos. */
+}
+
+
+/* Estilos para links dentro da barra de navegação quando estão em estado de "hover" (sobreposto pelo cursor) */
+
+nav > a:hover {
+    background-color: var(--cor3);   /* Muda a cor de fundo dos links para a cor especificada pela variável cor3 quando o mouse está sobre  eles. */
+    color: var(--cor5);             /* Muda a cor do texto dos links para a cor especificada pela variável cor5 quando o mouse está sobre eles. */
+}
+
+
+/* Estilos para o conteúdo principal (main) */
+
+main {
+    background-color: white;                  /* Define a cor de fundo do conteúdo principal como branco. */
+    min-width: 300px;                           /* Define a largura mínima do conteúdo principal como 300 pixels. */
+    max-width: 1000px;                          /* Define a largura máxima do conteúdo principal como 1000 pixels. */
+    margin: auto;                               /* Centraliza o conteúdo principal horizontalmente na página. */
+    margin-bottom: 30px;                        /* Adiciona uma margem inferior de 30 pixels ao conteúdo principal. */
+    padding: 20px;                              /* Adiciona um preenchimento interno de 20 pixels ao redor do conteúdo principal. */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.541);
+    /* Adiciona uma sombra ao conteúdo principal com deslocamento horizontal e vertical zero,
+       desfoque de 10 pixels e cor rgba(0, 0, 0, 0.541) (preto com transparência). */
+    border-bottom-left-radius: 10px;            /* Adiciona um raio de borda de 10 pixels ao canto inferior esquerdo do conteúdo principal. */
+    border-bottom-right-radius: 10px;           /* Adiciona um raio de borda de 10 pixels ao canto inferior direito do conteúdo principal. */
+}
+
+
+/* Estilos para títulos h1 dentro do conteúdo principal (main) */
+
+main h1 {
+    color: var(--cor5);                     /* Define a cor do texto do título h1 usando a variável cor5. */
+    font-family: var(--fonte-android);      /* Define a família de fontes do título h1 usando a variável fonte-android. */
+}
+
+
+/* Estilos para títulos h2 dentro do conteúdo principal (main) */
+
+main h2 {
+    font-family: var(--fonte-android);      /* Define a família de fontes do título h2 usando a variável fonte-android. */
+    color: var(--cor4);                     /* Define a cor do texto do título h2 usando a variável cor4. */
+    font-size: 1.3em;                       /* Define o tamanho da fonte do título h2 como 1.3 vezes o tamanho padrão. */
+    background-image: linear-gradient(to right, var(--cor1),transparent);
+    /* Adiciona um plano de fundo gradiente horizontal do cor1 para transparente no título h2. */
+    text-indent: 8px;                       /* Adiciona um recuo de 8 pixels à primeira linha do título h2. */
+}
+
+
+/* Estilos para imagens dentro do conteúdo principal (main) */
+
+main img {
+    width: 100%;    /* Define a largura da imagem como 100% da largura do contêiner pai, fazendo com que a imagem se ajuste à largura disponível. */
+}
+
+
+/* Estilos para imagens com a classe 'pequena' dentro do conteúdo principal (main) */
+
+main img.pequena {
+    max-width: 350px;  /* Limita a largura máxima da imagem pequena a 350 pixels. */
+    display: block;    /* Define a exibição da imagem como bloco para centralizar horizontalmente. */
+    margin: auto;      /* Centraliza a imagem horizontalmente no contêiner pai. */
+}
+
+
+/* Estilos para o bloco de vídeo (div.video) */
+
+div.video {
+    background-color: var(--cor5);          /* Define a cor de fundo do bloco de vídeo usando a variável cor5. */
+    margin: 0px -20px 30px -20px;            /* Adiciona margens negativas para compensar o preenchimento externo. */
+    padding: 20px;                          /* Adiciona um preenchimento interno de 20 pixels ao redor do bloco de vídeo. */
+    padding-bottom: 59%;                    /* Adiciona um preenchimento inferior equivalente a 59% da largura do bloco de vídeo.
+                                               Isso cria espaço para o vídeo sem distorcer a proporção. */
+    position: relative;                     /* Define a posição como relativa para permitir o posicionamento absoluto dos elementos filhos. */
+}
+
+
+/* Estilos para o elemento iframe dentro do bloco de vídeo (div.video > iframe) */
+
+div.video > iframe {
+    position: absolute;  /* Define a posição do iframe como absoluta em relação ao bloco de vídeo. */
+    top: 5%;             /* Define a distância superior do iframe em relação ao bloco de vídeo como 5% da altura do bloco de vídeo. */
+    left: 5%;            /* Define a distância esquerda do iframe em relação ao bloco de vídeo como 5% da largura do bloco de vídeo. */
+    width: 90%;          /* Define a largura do iframe como 90% da largura do bloco de vídeo. */
+    height: 90%;         /* Define a altura do iframe como 90% da altura do bloco de vídeo. */
+}
+
+
+/* Estilos para a barra lateral (aside) */
+
+aside {
+    background-color: var(--cor1);         /* Define a cor de fundo da barra lateral usando a variável cor1. */
+    padding: 10px;                          /* Adiciona um preenchimento interno de 10 pixels ao redor do conteúdo da barra lateral. */
+    border-radius: 10px;                    /* Adiciona um raio de borda de 10 pixels, arredondando as bordas da barra lateral. */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+    /* Adiciona uma sombra à barra lateral com deslocamento horizontal e vertical de 3 pixels,
+       desfoque de 8 pixels e cor rgba(0, 0, 0, 0.281) (preto com transparência). */
+}
+
+
+/* Estilos para títulos h3 dentro da barra lateral (aside > h3) */
+
+aside > h3 {
+    background-color: var(--cor4);        /* Define a cor de fundo do título h3 usando a variável cor4. */
+    color: white;                         /* Define a cor do texto do título h3 como branco. */
+    padding: 5px;                         /* Adiciona um preenchimento interno de 5 pixels ao redor do conteúdo do título h3. */
+    margin: -10px -10px 0 -10px;          /* Adiciona margens para compensar as bordas arredondadas na parte superior do título h3. */
+    border-radius: 10px 10px 0px 0px;     /* Adiciona um raio de borda para arredondar as bordas superiores do título h3. */
+}
+
+
+/* Estilos para listas não ordenadas (ul) dentro da barra lateral (aside > ul) */
+
+aside > ul {
+    list-style-position: inside;  /* Define a posição dos marcadores/bolas de lista para dentro do contêiner da lista. */
+    columns: 2;                  /* Divide a lista em duas colunas. */
+}
+
+
+/* Estilos para o rodapé (footer) */
+
+footer {
+    background-color: var(--cor5);  /* Define a cor de fundo do rodapé usando a variável cor5. */
+    color: white;                   /* Define a cor do texto do rodapé como branco. */
+    text-align: center;             /* Centraliza o texto dentro do rodapé. */
+    font-size: 0.8em;               /* Define o tamanho da fonte do texto do rodapé como 0.8 vezes o tamanho padrão. */
+    padding: 5px;                   /* Adiciona um preenchimento interno de 5 pixels ao redor do conteúdo do rodapé. */
+}
+
+
+/* Estilos para links dentro do rodapé (footer a) */
+
+footer a {
+    color: white;           /* Define a cor do texto dos links no rodapé como branco. */
+    font-weight: bold;      /* Define o peso da fonte dos links como negrito. */
+    text-decoration: none;  /* Remove a decoração de texto dos links (sublinhado por padrão). */
+}
+
+
+/* Estilos para links no rodapé quando hover (footer a:hover) */
+
+footer a:hover {
+    text-decoration: underline;  /* Adiciona um sublinhado aos links quando estão no estado de hover. */
+    color: var(--cor1);          /* Define a cor do texto dos links como a variável cor1 quando estão no estado de hover. */
+}
